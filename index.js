@@ -49,7 +49,7 @@ let posts = [
 
 
 //Gets all the posts
-app.get("/posts", (req, res) => {
+app.get("/", (req, res) => {
     res.render("allposts.ejs", { posts })
     
 })
