@@ -1,0 +1,236 @@
+/* ===== GLOBAL ===== */
+body {
+  font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1e1e1e;
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ===== NAVBAR ===== */
+header {
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 22px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  z-index: 50;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 24px;
+  color: #1da1f2;
+  margin: 0;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ===== BUTTONS ===== */
+.new-post-btn {
+  background: linear-gradient(90deg, #1da1f2, #0069c0);
+  color: white;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.new-post-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(29, 161, 242, 0.4);
+}
+
+.mode-toggle {
+  font-size: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.mode-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* ===== FEED ===== */
+.feed {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 10px 50px;
+}
+
+/* ===== POST CARDS ===== */
+.post-card {
+  background: white;
+  border-radius: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== POST HEADER ===== */
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.post-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #1da1f2;
+  transition: color 0.4s ease;
+}
+
+.post-id {
+  color: #777;
+  font-size: 13px;
+  transition: color 0.4s ease;
+}
+
+/* ===== POST CONTENT ===== */
+.post-content {
+  margin: 12px 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: inherit;
+  transition: color 0.4s ease;
+}
+
+/* ===== ACTIONS ===== */
+.post-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.action-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #657786;
+  transition: color 0.3s ease;
+}
+
+.action-link:hover {
+  color: #1da1f2;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 25px 0;
+  font-size: 13px;
+  color: #888;
+  transition: color 0.4s ease;
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #15202b;
+  color: #e1e8ed;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+body.dark header {
+  background: rgba(25, 39, 52, 0.9);
+  border-bottom: 1px solid #22303c;
+}
+
+body.dark .new-post-btn {
+  background: linear-gradient(90deg, #1da1f2, #1991da);
+}
+
+body.dark .post-card {
+  background: #192734;
+  border: 1px solid #22303c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .post-card:hover {
+  background: #22303c;
+}
+
+body.dark .post-info h3 {
+  color: #1da1f2;
+}
+
+body.dark .post-id {
+  color: #8899a6;
+}
+
+body.dark .post-content {
+  color: #e1e8ed;
+}
+
+body.dark .action-link {
+  color: #8899a6;
+}
+
+body.dark .action-link:hover {
+  color: #1da1f2;
+}
+
+body.dark footer {
+  color: #657786;
+}
+
+
+
+/* ===== NEON BLUE DELETE BUTTON ===== */
+.post-form button {
+  background: #00b7ff;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.post-form button:hover {
+  background: #0099d6;
+  transform: translateY(-2px);
+}
+
+/* ===== DARK MODE ===== */
+body.dark .post-form button {
+  background: #0099ff;
+}
+
+body.dark .post-form button:hover {
+  background: #00c3ff;
+  transform: translateY(-2px);
+}

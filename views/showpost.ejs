@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post — notTwitter</title>
+  <link rel="stylesheet" href="/showpost.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-left">
+      <h1>notTwitter</h1>
+    </div>
+    <div class="nav-right">
+      <a href="/posts" class="back-btn">← Back</a>
+      <button id="mode-toggle" class="mode-toggle">🌙</button>
+    </div>
+  </header>
+
+  <main class="post-container">
+    <div class="post-card">
+      <div class="post-header">
+        <img
+          src="https://api.dicebear.com/8.x/identicon/svg?seed=<%= post.username %>"
+          alt="avatar"
+          class="avatar"
+        />
+        <div>
+          <h3>@<%= post.username %></h3>
+          <span class="post-id">Post ID: <%= post.id %></span>
+        </div>
+      </div>
+
+      <p class="post-content"><%= post.content %></p>
+
+      <div class="post-actions">
+        <a href="/posts/edit/<%= post.id %>" class="action-link">Edit</a>
+        <a href="/posts" class="action-link">Back to Feed</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 notTwitter — where ideas echo softly.</p>
+  </footer>
+
+  <script>
+    // 🌗 Light/Dark mode toggle
+    const toggle = document.getElementById("mode-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>

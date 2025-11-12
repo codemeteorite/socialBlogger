@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Post — notTwitter</title>
+  <link rel="stylesheet" href="/editpost.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-left">
+      <h1>notTwitter</h1>
+    </div>
+    <div class="nav-right">
+      <a href="/posts" class="back-btn">← Back</a>
+      <button id="mode-toggle" class="mode-toggle">🌙</button>
+    </div>
+  </header>
+
+  <main class="form-container">
+    <form method="post" action="/posts/<%= foundPost.id %>?_method=PATCH" class="post-form">
+      <h2>Edit your post</h2>
+
+      <label for="content">Update content</label>
+      <textarea id="content" name="content" rows="5" maxlength="280" required><%= foundPost.content %></textarea>
+
+      <button class="submit-btn">Save Changes</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 notTwitter — where ideas echo softly.</p>
+  </footer>
+
+  <script>
+    // 🌗 Light/Dark mode toggle
+    const toggle = document.getElementById("mode-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>

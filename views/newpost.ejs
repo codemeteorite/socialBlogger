@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create a Post — notTwitter</title>
+  <link rel="stylesheet" href="/newpost.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-left">
+      <h1>notTwitter</h1>
+    </div>
+    <div class="nav-right">
+      <a href="/posts" class="back-btn">← Back</a>
+      <button id="mode-toggle" class="mode-toggle">🌙</button>
+    </div>
+  </header>
+
+  <main class="form-container">
+    <form action="/posts" method="POST" class="post-form">
+      <h2>Create a new post</h2>
+
+      <input type="text" id="user" name="user" required placeholder="@yahiya" />
+
+     
+      <textarea id="content" name="content" rows="4" maxlength="280" required placeholder="Anyone tryna buy me a Shawarma?"></textarea>
+
+      <button type="submit" class="submit-btn">Post</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 notTwitter — where ideas echo softly.</p>
+  </footer>
+
+  <script>
+    // 🌗 Light/Dark mode toggle
+    const toggle = document.getElementById("mode-toggle");
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggle.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+  </script>
+</body>
+</html>
