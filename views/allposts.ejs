@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>notTwitter</title>
   <link rel="stylesheet" href="/allposts.css" />
 </head>
+
 <body class="dark">
   <header>
     <div class="nav-left">
@@ -23,19 +25,25 @@
         <div class="post-header">
           <img src="https://api.dicebear.com/8.x/identicon/svg?seed=<%= post.username %>" alt="avatar" class="avatar" />
           <div class="post-info">
-            <h3>@<%= post.username %></h3>
+            <h3>@<%= post.username %>
+            </h3>
           </div>
         </div>
-        <p class="post-content"><%= post.content %></p>
+        <p class="post-content">
+          <%= post.content %>
+        </p>
         <div class="post-actions">
           <a href="/posts/edit/<%= post.id %>" class="action-link">Edit</a>
           <a href="/posts/<%= post.id %>" class="action-link">View</a>
-          <form method="post" action="/posts/delete/<%= post.id %>?_method=DELETE" class="post-form">
-            <button>Delete</button>
-          </form>
+          <form method="POST" action="/posts/<%= post.id %>?_method=DELETE" class="post-form">
+  <button>Delete</button>
+</form>
+
+
+
         </div>
       </div>
-    <% } %>
+      <% } %>
   </main>
 
   <footer>
@@ -53,4 +61,5 @@
     });
   </script>
 </body>
+
 </html>

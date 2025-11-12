@@ -15,5 +15,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codemeteorite/socialBlogger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/codemeteorite/socialBlogger/issues"
+  },
+  "homepage": "https://github.com/codemeteorite/socialBlogger#readme",
   "description": ""
 }
